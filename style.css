@@ -1,0 +1,38 @@
+.slider-circle {
+    padding: 20px;
+    -webkit-perspective: 495px;
+    perspective: 595px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.slider-circle > * {
+    flex: 0 0 auto;
+}
+.slider-circle figure {
+    margin: 0;
+    width: 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+}
+.slider-circle figure img,
+.slider-circle figure div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+.slider-circle figure div:not(:first-of-type),
+.slider-circle figure img:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slider-circle nav {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0;
+}
